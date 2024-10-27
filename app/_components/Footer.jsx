@@ -5,7 +5,7 @@ function Footer() {
     <footer className="bg-white lg:grid lg:grid-cols-5">
   <div className="relative block h-32 lg:col-span-2 lg:h-full">
     <img
-      src="http://localhost:1337/uploads/Whats_App_Image_2024_10_25_at_22_09_16_e706351895.jpeg"
+      // src="http://localhost:1337/uploads/Whats_App_Image_2024_10_25_at_22_09_16_e706351895.jpeg"
       alt=""
       className="absolute inset-0 h-full w-full object-cover rounded-3xl"
     />

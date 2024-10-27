@@ -25,7 +25,7 @@ function ProductItemDetail({ product }) {
           <h2 className='text-sm'>{product.soilType}</h2>
         </div>
         <div className='flex gap-2 mt-3 align-middle'>
-          <h2 className='text-2xl'>${product.price}</h2>
+          <h2 className='text-2xl font-semibold'>${product.price}</h2>
         </div>
         <div className='flex gap-2 items-center'>
           <h2 className='font-bold'>Quantity</h2>

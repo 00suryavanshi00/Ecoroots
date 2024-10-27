@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <div className="p-5 md:p-10 ">
       <Slider sliderList={sliderList}/>
-      <CategoryList classname= 'p-50' categoryList={categoryList}/>
+      <CategoryList classname= '' categoryList={categoryList}/>
 
       <ProductList productList={productList}/>
 

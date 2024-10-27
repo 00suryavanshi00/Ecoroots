@@ -23,7 +23,7 @@ function Header() {
 
     const getCategoryLIst=()=>{
         getCategory().then(response=>{
-            console.log('&*&*&*&', response.data.data)
+
             setCategoryList(response.data.data)}
         )
     }
@@ -45,7 +45,7 @@ function Header() {
     {/* <DropdownMenuLabel>Flowering Platn</DropdownMenuLabel> */}
     {/* <DropdownMenuSeparator /> */}
     {categorylist.map((category, index) => {
-        console.log(category.icon[0].url)
+
     return (
         <DropdownMenuItem className='flex gap-4 items-center p-2' key={index}>
             <Image src={`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/${category.icon[0].url}`} alt='logo' width={30} height={30}/>

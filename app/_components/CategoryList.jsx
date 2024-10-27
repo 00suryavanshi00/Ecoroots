@@ -7,7 +7,6 @@ function CategoryList({ categoryList }) {
       <h2 className='font-bold text-2xl py-5 cursor-default'>Shop by Category</h2>
       <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 gap-5 mt-5'>
         {categoryList.map((category, index) => {
-          console.log(category);
           return (
             <div className='flex flex-col items-center gap-2 bg-green-100 p-3 rounded-lg shadow-lg cursor-pointer group' key={index}>
               <Image
