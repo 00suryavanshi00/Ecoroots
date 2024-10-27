@@ -19,12 +19,13 @@ jobs:
           service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
           project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-      - name: Configure Docker
-        run: gcloud auth configure-docker
+      - name: Configure Docker for Artifact Registry
+        run: |
+          gcloud auth configure-docker asia-south1-docker.pkg.dev
 
       - name: Build and push Docker image to Artifact Registry
         run: |
-          IMAGE_NAME=asia-south1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ecoroots-repo-v1/ecoroots-nextjs-app
+          IMAGE_NAME=asia-south1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ecoroots-repo-v1/nextjs-app
           docker build -t $IMAGE_NAME .
           docker push $IMAGE_NAME
 
