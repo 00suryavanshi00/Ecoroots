@@ -11,7 +11,7 @@ function CategoryList({ categoryList }) {
             <div className='flex flex-col items-center gap-2 bg-green-100 p-3 rounded-lg shadow-lg cursor-pointer group' key={index}>
               <Image
                 className='transition-transform duration-200 ease-in-out group-hover:scale-125'
-                src={`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/${category.icon[0].url}`}
+                src={`${category?.icon[0]?.url}`}
                 alt='icon'
                 width={30}
                 height={30}

@@ -1,12 +1,15 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Footer() {
   return (
     <footer className="bg-white lg:grid lg:grid-cols-5">
   <div className="relative block h-32 lg:col-span-2 lg:h-full">
-    <img
-      // src="http://localhost:1337/uploads/Whats_App_Image_2024_10_25_at_22_09_16_e706351895.jpeg"
+    <Image
+      src="https://storage.googleapis.com/ecoroots_assets_bucket/Whats_App_Image_2024_10_25_at_22_09_16_b4b3b733a9/Whats_App_Image_2024_10_25_at_22_09_16_b4b3b733a9.jpeg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=590516909829-compute%40developer.gserviceaccount.com%2F20241027%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241027T233105Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=b61968821ab227c27ff026eca434b82097f8ed1f281dfe289b6131a5956f96a448f2223cf4f4702a992cc91b111fb0da7c27633167952a82765f694eae09f22a30da2c57267981023986ea19982dc795fff8f9435a665c6640ae76a1764abe18bfb01d6809a8fcf345e3e2d6e21441677b4ea7ee83b84e7135205ee0e1e7079a9ac317be9885eb1b00561ae090dc68d5af87af2ee0900f6e0750a37fc3ccb9e00a33573cd99095166b7f3ef84eb229c3d9c69e9cf13b571bf4738f8859752d89649cddea55eeccd36d6bfe612886c5ea164dcf194bd20a04e8fcf98cd176269e8fc4b673e96033ad6ca737026c5646d822f2e1e33023fed1218e176f4044c351"
       alt=""
+      width={1000}
+      height={100}
       className="absolute inset-0 h-full w-full object-cover rounded-3xl"
     />
   </div>

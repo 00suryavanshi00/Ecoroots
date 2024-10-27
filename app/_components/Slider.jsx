@@ -14,7 +14,6 @@ function Slider({sliderList}) {
     <CarouselContent>
       
       {sliderList.map((slider, index)=>{
-        console.log('slider &*&*&*&*&*&*&*&*&&**-------------------', index, slider)
         return <CarouselItem key={index}>
           <Image 
                 className="w-full h-[400px] object-cover"

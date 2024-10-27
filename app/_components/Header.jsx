@@ -32,7 +32,7 @@ function Header() {
     <div className='p-4 shadow-sm flex justify-between'>
         <div className='flex items-center gap-10 '>
 
-        <Image src='/logo.svg' alt='logo' width={150} height={150}/>
+        <Image src='https://storage.googleapis.com/ecoroots_assets_bucket/Eco_Roots_Sans_deb523bbe8/Eco_Roots_Sans_deb523bbe8.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=590516909829-compute%40developer.gserviceaccount.com%2F20241027%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241027T233353Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=d52ac7d5b3535474b773f32ffe4bad11710bffdf316fbe208f0d03398d139710d1989c42f75a4673c3dba0b14e90650bcab1eb390cd6bc8465e32338656b796468aceab5e3e2e6e1ba1f1ac2b76f5ac5ac884994013a572fc3c2a336ab81290717d2e35690f0b14b45637ba4adad33fd2c3a6176906c9e6dfa1f4cdb13f9c02c141b04802cfeeb970d8266ec56909c8fafb81749690e80928dbd92f8b059fd5012060676783c82af867ad1a4b6b138694c7f6afa909f6b1efbf5bd91730a8075b333c8a16c00889faf20bed0a0bfe847036ea4b52681833ae7975d21413e3c49988ba9d50ab0bc441ffc87df2435d5caba6912d5e76c0bd60f1df6a7638cdf3e' alt='logo' width={150} height={150}/>
 
             <DropdownMenu>
             <DropdownMenuTrigger className='outline-none'>
@@ -48,7 +48,7 @@ function Header() {
 
     return (
         <DropdownMenuItem className='flex gap-4 items-center p-2' key={index}>
-            <Image src={`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/${category.icon[0].url}`} alt='logo' width={30} height={30}/>
+            <Image src={`${category?.icon[0].url}`} alt='logo' width={30} height={30}/>
             <h2 className='text-primary text-lg'>{category.name}</h2>
         </DropdownMenuItem>
     );
@@ -73,7 +73,7 @@ function Header() {
 
         </div>
         <div className='flex items-center gap-5'>
-            <h2 className='flex items-center gap-1'><ShoppingBag/> 0</h2>
+            <h2 className='flex items-center gap-1'><ShoppingBag/> 10</h2>
             <Button>Login</Button>
         </div>
     </div>
