@@ -4,7 +4,7 @@
 
 First, run the development server:
 
-The backend for this is on [Strapi] which is deployed on [Render].
+The backend for this is on [Strapi](https://strapi.io/) which is deployed on [Render](https://render.com/).
 
-Here's the live link to the deployed Strapi project. ['https://ecoroots-strapicms.onrender.com']
+Here's the live link to the deployed [EcoRoots Strapi]('https://ecoroots-strapicms.onrender.com') project. 
 
