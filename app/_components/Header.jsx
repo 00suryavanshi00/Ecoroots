@@ -48,7 +48,7 @@ function Header() {
     {categorylist.map((category, index) => {
 
     return (
-        <Link href={'/products-categories/' + category.name}>
+        <Link href={'/products-categories/' + category.name} key={index}>
         <DropdownMenuItem className='flex gap-4 items-center p-2' key={index}>
             <Image src={`${category?.icon[0].url}`} alt='logo' width={30} height={30}/>
             <h2 className='text-primary text-lg'>{category.name}</h2>

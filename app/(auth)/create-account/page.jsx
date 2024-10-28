@@ -51,8 +51,8 @@ function CreateAccount() {
       <Input placeholder='Password : mygirl_name_password' type='password' onChange={
         (e)=>setPassword(e.target.value)
       }/>
-      <Button onClick={()=>onCreateAccount()} disabled={!(username || email || password)}>Let's Create My Garden</Button>
-      <p>We're buddies already? 
+      <Button onClick={()=>onCreateAccount()} disabled={!(username || email || password)}>Lets Create My Garden</Button>
+      <p>We are buddies already? 
         <Link href={"/sign-in"} className='text-blue-500'>Which account we know you from?</Link>
       </p>
 
