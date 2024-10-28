@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+
 function TopCategory({ categoryList }) {
     return (
         <div className="mx-7 md:mx:20 overflow-x-auto p-2 mt-5 flex justify-center">

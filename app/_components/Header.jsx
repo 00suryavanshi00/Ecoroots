@@ -32,7 +32,7 @@ function Header() {
     <div className='p-4 shadow-sm flex justify-between'>
         <div className='flex items-center gap-10 '>
 
-        <Image src='https://storage.googleapis.com/ecoroots_assets_bucket/Eco_Roots_Sans_deb523bbe8/Eco_Roots_Sans_deb523bbe8.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=590516909829-compute%40developer.gserviceaccount.com%2F20241027%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241027T233353Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=d52ac7d5b3535474b773f32ffe4bad11710bffdf316fbe208f0d03398d139710d1989c42f75a4673c3dba0b14e90650bcab1eb390cd6bc8465e32338656b796468aceab5e3e2e6e1ba1f1ac2b76f5ac5ac884994013a572fc3c2a336ab81290717d2e35690f0b14b45637ba4adad33fd2c3a6176906c9e6dfa1f4cdb13f9c02c141b04802cfeeb970d8266ec56909c8fafb81749690e80928dbd92f8b059fd5012060676783c82af867ad1a4b6b138694c7f6afa909f6b1efbf5bd91730a8075b333c8a16c00889faf20bed0a0bfe847036ea4b52681833ae7975d21413e3c49988ba9d50ab0bc441ffc87df2435d5caba6912d5e76c0bd60f1df6a7638cdf3e' alt='logo' width={150} height={150}/>
+        <Image src='https://storage.googleapis.com/ecoroots_assets_bucket/Eco_Roots_Sans_deb523bbe8/Eco_Roots_Sans_deb523bbe8.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=590516909829-compute%40developer.gserviceaccount.com%2F20241028%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241028T164433Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=3057bfdb5983173f6b54279714c515bd9b8d8e2be93855363d5635770b1f43895ef23f3231892519a51b490a6877f1a52eac4a7e3fcb1b0d296113844a32d47e78f5dbe210adf0d7f417218867749469a2f8d7599b0cc9b5d69561137cba32b52c9f6de4a57ddbe3a734cad9761320f303eecd9f0979457d8e16c119ede379627f4964441180a49a9b964c8a64687a75fb3871fe28a34de79a52ed35da208fadb5af529ce78ee2ee9c81f6ca36c8eb7f0b3150a533f55336939d11b62535256a8bd940ca887eea1aedf8fd50a154c8a9ec6b672b0e17a05c303292afbf6a1a635f8b1ab9ab9aaa7cd389f965c83994daf27c689b5f542306ed81b647fe8ea3f8' alt='logo' width={150} height={150}/>
 
             <DropdownMenu>
             <DropdownMenuTrigger className='outline-none'>
@@ -73,7 +73,7 @@ function Header() {
 
         </div>
         <div className='flex items-center gap-5'>
-            <h2 className='flex items-center gap-1'><ShoppingBag/> 10</h2>
+            <h2 className='flex items-center gap-1'><ShoppingBag/>0</h2>
             <Button>Login</Button>
         </div>
     </div>

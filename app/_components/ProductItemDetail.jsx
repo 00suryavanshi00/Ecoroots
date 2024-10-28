@@ -7,7 +7,7 @@ function ProductItemDetail({ product }) {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
       <Image
-        src={`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}${product.images[0].url}`}
+        src={`${product.images[0].url}`}
         alt='image'
         width={300}
         height={300}

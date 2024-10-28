@@ -4,7 +4,10 @@ import TopCategory from './_components/TopCategory';
 import ProductList from '@/app/_components/ProductList';
 
 async function ProductCategory({ params }) {
-    const productListFromCat = await getProdFromCategory(params.categoryName)
+    
+    const { categoryName } = await params;
+    console.log(categoryName)
+    const productListFromCat = await getProdFromCategory(categoryName)
     const categoryList = await getCategoryList();
     console.log("#$%^&*(eight here")
     console.log(productListFromCat)
