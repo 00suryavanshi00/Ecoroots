@@ -8,6 +8,14 @@ const axiosClient = axios.create({
 
 export const getCategory=()=>axiosClient.get('/categories?populate=*')
 
+export const getProdFromCategory = async (category)=>{
+  let response = await axiosClient.get(`/products?filters[categories][name][$in]=${category}`+"&populate=*")
+  console.log('this is the response', response.data.data)
+  return response.data.data
+
+}
+
+
 export const getCategoryList= async ()=> {
     let response = await axiosClient.get('/categories?populate=*')
     return response.data.data
