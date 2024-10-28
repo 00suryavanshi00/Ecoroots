@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-white lg:grid lg:grid-cols-5">
   <div className="relative block h-32 lg:col-span-2 lg:h-full">
-    <Image src="https://storage.googleapis.com/ecoroots_assets_bucket/Whats_App_Image_2024_10_25_at_22_09_16_b4b3b733a9/Whats_App_Image_2024_10_25_at_22_09_16_b4b3b733a9.jpeg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=590516909829-compute%40developer.gserviceaccount.com%2F20241028%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241028T211052Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=9700303e06a4669eb8922505ab295ce1c96d9e4ae898cac6a6ea202979122edf3cb818b1802dac8ab3e3d1da7997bf3ac9008a425b825451c75789e83e7ff08e38f7fe03dc188ebcd720c3fc9e5e88b1b91a8f39cbbeb5e2907896c6a4d2962405c2471eb559fc64ef8018d9139f2dc10d2acc86818c9dcf5183555ef02668cd8745ffc0850c6630503d6384fe85fdc5c89a95b5fa61ad7629fb50d9543992969b219750f308e725110abc176ddb1164e230e150fa96172d606c6d9d4e3f71966b367cf2e114b36aec4a3983522a694548e7302df39fa978291abb8acc0e8924f1a682e00c5d3b729149bc60122f7b210040ffc4a587333520332510fc345b86" alt="" width={1000} height={100} className="absolute inset-0 h-full w-full object-cover rounded-3xl"
+    <Image src="/team.jpeg" alt="" width={1000} height={100} className="absolute inset-0 h-full w-full object-cover rounded-3xl"
     />
   </div>
 

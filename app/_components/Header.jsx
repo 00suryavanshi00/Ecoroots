@@ -33,7 +33,7 @@ function Header() {
     <div className='p-4 shadow-sm flex justify-between'>
         <div className='flex items-center gap-10 '>
 
-        <Image src='https://storage.googleapis.com/ecoroots_assets_bucket/Eco_Roots_Sans_deb523bbe8/Eco_Roots_Sans_deb523bbe8.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=590516909829-compute%40developer.gserviceaccount.com%2F20241028%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241028T211052Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=df6968cb63e243e7215db0a64f9d1e91a5142c7373dd86e9c555d676a55bb05a1b422c455b71bae1745efdd3b72156eec6dc856f49e194a7b3f868050f04ab818dd7b59e56ec8bf25a1af88193893dc934bee09c9c39a7c05c0121bd88f733189bfc56fb2c1b3b578194f89293e1db34d8bd1e185dcc27b2bf09702bcd0675f86a60075ccc59581075fa53d0203304a7903d744d53d1d36402ea9c7205adca0bf95eaeb7f1a6e245b6c6c06d7966df9147cc54bc73d7ebda51e705b6549395808903bac76d554459e8fa75f70992ab55abd7573c3a6291b2398373ccb5ace6f2b81c1996abcebbcb65174f3df62f279aa19bf5f2f5c924cfc1dd480d0c6ea24d' alt='logo' width={150} height={150}/>
+        <Image src='/ecorootslogo.svg' alt='logo' width={150} height={150}/>
 
             <DropdownMenu>
             <DropdownMenuTrigger className='outline-none'>
@@ -75,7 +75,7 @@ function Header() {
 
         </div>
         <div className='flex items-center gap-5'>
-            <h2 className='flex items-center gap-1'><ShoppingBag/>1</h2>
+            <h2 className='flex items-center gap-1'><ShoppingBag/>0</h2>
             <Button>Login</Button>
         </div>
     </div>
