@@ -1,3 +1,5 @@
+import { toast } from "sonner";
+
 const { default: axios } = require("axios");
 
 const axiosClient = axios.create({
@@ -40,5 +42,26 @@ export const getproducts = async () =>{
         console.error('Error fetching sliders:', error);
         return [];  // Return an empty array in case of error
       }
+}
+
+
+export const registerUser = async (uname, email, pass)=>{
+
+  try{
+    const response = await axiosClient.post('/auth/local/register',{
+      username:uname,
+      email: email,
+      password: pass
+    })
+    console.log('(##########################)',response.data)
+    return response.data
+  }
+  catch (error) {
+    toast("Oopsieeee!")
+    console.log('(##########################)',response.data.code)
+    console.error('Error fetching sliders:', error);
+    return [];  // Return an empty array in case of error
+  }
+
 }
 

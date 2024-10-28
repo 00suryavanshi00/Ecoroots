@@ -33,7 +33,7 @@ function ProductItem({ product, index }) {
      
       <h3 className='flex justify-center w-full align-bottom text-sm md:text-lg'>${product.price}</h3>
       <Dialog>
-        <DialogTrigger>
+        <DialogTrigger asChild>
           <Button className='px-4 py-2 md:px-5 md:py-3 bg-green-100 text-primary shadow-inner border-green-100 hover:text-white'>Add to cart</Button>
         </DialogTrigger>
         <DialogContent>

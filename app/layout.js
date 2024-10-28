@@ -1,4 +1,5 @@
 
+import { Toaster } from "@/components/ui/sonner";
 import Header from "./_components/Header";
 import "./globals.css";
 import { Roboto, Montserrat} from "next/font/google"
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         className={montserrat.className}
       ><Header/>
         {children}
+        <Toaster />
       </body>
     </html>
   );
