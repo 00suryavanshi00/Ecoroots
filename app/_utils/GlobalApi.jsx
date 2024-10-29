@@ -65,3 +65,21 @@ export const registerUser = async (uname, email, pass)=>{
 
 }
 
+export const logInUser = async(email, pass)=>{
+  try{
+    console.log('inside try')
+    const response = await axiosClient.post('/auth/local',{
+      identifier: email,
+      password: pass
+    })
+    console.log('(##########################)',response.data)
+    return response.data
+}
+catch (error) {
+  console.log('(##########################)',response.data)
+  toast("Oopsieeee!")
+  console.error('Error fetching sliders:', error);
+  return [];  // Return an empty array in case of error
+}
+}
+
