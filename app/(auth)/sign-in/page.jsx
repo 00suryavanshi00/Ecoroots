@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'
@@ -14,6 +14,15 @@ function SignIn() {
     const [password, setPassword] = useState()
     const [email, setEmail] = useState()
     const router = useRouter()
+
+    useEffect(()=>{
+        const jwt = sessionStorage.getItem('jwt');
+
+        if(jwt){
+            toast("You are already logged in!")
+            router.push('/')
+        }
+    },[])
 
     const onSignIn= async (email, pass)=>{
 
