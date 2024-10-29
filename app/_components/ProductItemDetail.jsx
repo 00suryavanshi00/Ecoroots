@@ -1,9 +1,36 @@
+"use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ShoppingBag } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { addProductToCart } from '../_utils/GlobalApi';
+import { toast } from 'sonner';
 
 function ProductItemDetail({ product }) {
+
+  const [quantity, setQuantity] = useState(1);
+
+  const jwt = sessionStorage.getItem('jwt')
+  const user = JSON.parse(sessionStorage.getItem('user'))
+  const router = useRouter()
+
+  const addToCart=(product)=>{
+
+    if(!jwt){
+      router.push('/sign-in')
+    }
+    const data = {
+      quantity: quantity,
+      amount: product.price,
+      product: product.id,
+      users_permissions_users: user.id
+    }
+    const response = addProductToCart(data, jwt)
+
+    console.log(response)
+    toast('Added to Cart')
+  }
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
       <Image
@@ -36,7 +63,7 @@ function ProductItemDetail({ product }) {
           </div>
         </div>
         <div className='mt-3 flex justify-end'>
-          <Button>Add to Cart <ShoppingBag /></Button>
+          <Button onClick={()=>addToCart(product)}>Add to Cart <ShoppingBag /></Button>
         </div>
       </div>
     </div>

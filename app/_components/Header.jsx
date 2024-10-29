@@ -9,14 +9,17 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
   
-import { LayoutGrid, Search, ShoppingBag } from 'lucide-react'
+import { CircleUserRound, LayoutGrid, Search, ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { getCategory } from '../_utils/GlobalApi'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 function Header() {
 
+
+    const router = useRouter()
     const [categorylist, setCategoryList] = useState([]);
     useEffect(()=>{
         getCategoryLIst();
@@ -27,6 +30,14 @@ function Header() {
 
             setCategoryList(response.data.data)}
         )
+    }
+    const isLoggedIn = sessionStorage.getItem('jwt')
+
+    function logOut(){
+
+        sessionStorage.clear()
+        router.push('/sign-in')
+
     }
 
   return (
@@ -55,14 +66,6 @@ function Header() {
         </DropdownMenuItem></Link>
     );
 })}
-    {/* <DropdownMenuItem className='text-primary'>Flowering Plants</DropdownMenuItem>
-    <DropdownMenuItem className='text-primary'>Non Flowering Plants</DropdownMenuItem>
-    <DropdownMenuItem className='text-primary'>Succulents</DropdownMenuItem>
-    <DropdownMenuItem className='text-primary'>Trees</DropdownMenuItem>
-    <DropdownMenuItem className='text-primary'>Shrubs</DropdownMenuItem>
-    <DropdownMenuItem className='text-primary'>Herbs</DropdownMenuItem>    
-    <DropdownMenuItem className='text-primary'>Vines</DropdownMenuItem>
-    <DropdownMenuItem className='text-primary'>Aquatic</DropdownMenuItem> */}
   </DropdownMenuContent>
 </DropdownMenu>
 
@@ -76,7 +79,30 @@ function Header() {
         </div>
         <div className='flex items-center gap-5'>
             <h2 className='flex items-center gap-1'><ShoppingBag/>0</h2>
-            <Button>Login</Button>
+            {!isLoggedIn 
+            ?
+            <Link href={'/sign-in'}>
+                <Button>Login</Button>
+            </Link>
+            : 
+            <DropdownMenu>
+                <DropdownMenuTrigger>
+
+                    <CircleUserRound className='text-primary bg-green-100 rounded-full p-1 h-10 w-10'/>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>My Orders</DropdownMenuItem>
+    <DropdownMenuItem>
+
+                <Button onClick={()=>logOut()}>Logout</Button>
+
+    </DropdownMenuItem>
+  </DropdownMenuContent>
+            </DropdownMenu>
+            }
         </div>
     </div>
   )

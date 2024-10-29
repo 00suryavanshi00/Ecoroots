@@ -67,19 +67,40 @@ export const registerUser = async (uname, email, pass)=>{
 
 export const logInUser = async(email, pass)=>{
   try{
-    console.log('inside try')
+
     const response = await axiosClient.post('/auth/local',{
       identifier: email,
       password: pass
     })
-    console.log('(##########################)',response.data)
+
     return response.data
 }
 catch (error) {
-  console.log('(##########################)',response.data)
+
   toast("Oopsieeee!")
   console.error('Error fetching sliders:', error);
   return [];  // Return an empty array in case of error
 }
+}
+
+
+
+export const addProductToCart=async (data, jwt)=>{
+  
+  try{
+
+    const response = await axiosClient.post('/user-carts',data,{
+      headers:{
+        Authorization: 'Bearer ' +jwt
+      }
+    })
+    return response.data
+  }catch (error) {
+  toast("Oopsieeee!")
+  console.log('(##########################)',response.data.code)
+  console.error('Error fetching sliders:', error);
+  return [];  // Return an empty array in case of error
+  }
+
 }
 
